@@ -1,9 +1,16 @@
 import {Injectable} from '@angular/core';
 import Web3 from 'web3';
-import {default as contract} from 'truffle-contract';
+//https://github.com/Quintor/angular-truffle-box/issues/22
+// import * as Web3 from 'web3';
+
+// import {default as contract} from 'truffle-contract';
 import metacoin_artifacts from '../../../build/contracts/MetaCoin.json';
-import vDice_artifacts from '../../../build/contracts/Dice.json';
+// import vDice_artifacts from '../../../build/contracts/Dice.json';
 import {Subject} from 'rxjs/Rx';
+
+// const Web3 = require('web3');
+const contract = require('truffle-contract');
+const vDice_artifacts = require( '../../../build/contracts/Dice.json');
 
 declare let window: any;
 
@@ -18,6 +25,8 @@ export class Web3Service {
 
   constructor() {
     //this.MetaCoin = contract(metacoin_artifacts);
+    console.log("🚀 ~ file: web3.service.ts ~ line 26 ~ Web3Service ~ constructor ~ vDice_artifacts", vDice_artifacts)
+
     this.VDice = contract(vDice_artifacts);
     
     window.addEventListener('load', (event) => {

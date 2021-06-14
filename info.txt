@@ -17,3 +17,6 @@ truffle compile / migrate / test ...
 /* Command Prompt 3 - MacOS */
 cd "C:\Code\vDice"
 truffle compile / migrate / test ...
+
+
+options = Object.assign(options, {fromBlock: latest})
