@@ -5,6 +5,10 @@ testrpc --mnemonic "case meadow shuffle purpose renew echo before correct rate a
 cd "C:\Code\ethereum-bridge"
 node bridge -a 49 --account 0x6f485C8BF6fc43eA212E93BBF8ce046C7f1cb475
 
+ethereum-bridge node bridge -a 49
+ethereum-bridge -H localhost:8545 -a 1
+
+
 /* Command Prompt 3 - Windows */
 cd "C:\Code\vDice"
 SET PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC
